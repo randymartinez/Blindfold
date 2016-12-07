@@ -45,10 +45,20 @@ public class move_controller : MonoBehaviour {
 		{
 			rb.AddForce(transform.forward * moveSpeed);
 		}
-
 		if (Input.GetKey(KeyCode.S) || (Input.GetKey(KeyCode.DownArrow)))
 		{
 			rb.AddForce(-transform.forward * moveSpeed);
 		}
+
+		if (Input.GetKey(KeyCode.A) || (Input.GetKey(KeyCode.LeftArrow)))
+		{
+			rb.AddForce(-transform.right * moveSpeed);
+		}
+		if (Input.GetKey(KeyCode.D) || (Input.GetKey(KeyCode.RightArrow)))
+		{
+			rb.AddForce(transform.right * moveSpeed);
+		}
+
+
 	}
 }
